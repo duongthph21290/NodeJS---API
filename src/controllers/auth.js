@@ -59,8 +59,6 @@ export const signin = async (req, res) => {
     try {
         // Destructuring : email , password
         const { email, password } = req.body;
-
-
         const { error } = signinSchema.validate(req.body, { abortEarly: false });
         if (error) {
             const errors = error.details.map((err) => err.message);

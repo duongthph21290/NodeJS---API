@@ -30,7 +30,7 @@ export const getAll = async (req, res) => {
         const data = await Product.paginate({}, options);
         if (data.length == 0) {
             return res.json({
-                message: "Không có  phẩm nào!",
+                message: "Không có sản phẩm nào!",
             });
         }
         return res.json(data);
